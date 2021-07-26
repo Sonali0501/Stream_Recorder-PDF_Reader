@@ -1,0 +1,42 @@
+.list {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+
+    .players-list{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 50px;
+        justify-content: center;
+    
+        .player {
+            min-width: 70vh;
+            border: 2px solid rgb(74, 83, 124);
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .list {
+        .players-list{
+            .player {
+                min-width: 50vh;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .list {
+        .players-list{
+            display: flex;
+            flex-direction: column;
+            
+            .player {
+                min-width: 40vh;
+            }
+        }
+    }
+}
+
