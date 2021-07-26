@@ -36,6 +36,7 @@ const PDFReader = () => {
                     id="file-upload"
                     onChange={onFileChange}
                     type="file"
+                    accept="application/pdf"
                 />
                 {numPages ? <Pagination numPages={numPages} page={page} setPage={setPage} /> : null}
             </div>

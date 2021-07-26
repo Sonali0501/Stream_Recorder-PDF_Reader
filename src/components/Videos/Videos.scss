@@ -13,6 +13,34 @@
         grid-template-columns: auto auto;
         gap: 50px;
         justify-content: center;
+
+        .player-btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            .btn_list{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                .record_btn {
+                    font-size: 16px;
+                    border: none;
+                    background-color: rgb(74, 83, 124);
+                    padding: 10px;
+                    color: white;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                }
+            }
+        }
     
         .player {
             min-width: 70vh;
@@ -36,6 +64,8 @@
         .players-list{
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             
             .player {
                 min-width: 40vh;

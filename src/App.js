@@ -5,7 +5,6 @@ import Recorder from './components/Recorder';
 import './App.scss';
 import Videos from './components/Videos';
 import PDFReader from './components/PDFReader';
-import PPTReader from './components/PPTReader';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" exact component={Recorder} />
         <Route path="/videos" component={Videos} />
         <Route path="/pdf" component={PDFReader} />
-        <Route path="/ppt" component={PPTReader} />
       </Switch>
     </BrowserRouter>
   );
