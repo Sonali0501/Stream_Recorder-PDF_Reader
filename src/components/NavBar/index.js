@@ -18,12 +18,13 @@ const Nav = () => {
                 <Link to="/ppt">PPT Reader</Link>
             </div>
             <FaBars color="white" size="24px" className="menu-icon" onClick={() => setOpen(!open)} />
-            {open &&
-            <div className="menu">
-                <Link to="/videos">Videos</Link>
-                <Link to="/pdf">PDF Reader</Link>
-                <Link to="/ppt">PPT Reader</Link>
-            </div>}
+            { open &&
+                <div className="menu">
+                    <Link to="/videos">Videos</Link>
+                    <Link to="/pdf">PDF Reader</Link>
+                    <Link to="/ppt">PPT Reader</Link>
+                </div>
+            }
         </nav>
     );
 }

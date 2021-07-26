@@ -4,6 +4,10 @@
     align-items: center;
     justify-content: center;
 
+    h2{
+        color: rgb(74, 83, 124);
+    }
+
     .players-list{
         display: grid;
         grid-template-columns: auto auto;

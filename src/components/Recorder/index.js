@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { FaStop, FaPlay } from 'react-icons/fa';
 import './Recorder.scss';
 import { saveVideo } from '../../ActionCreators'; 
@@ -9,6 +9,7 @@ const videoType = 'video/webm';
 class Recorder extends React.Component {
     constructor(props) {
         super(props);
+        
         this.state = {
             recording : false,
             videoOn: false
@@ -71,34 +72,32 @@ class Recorder extends React.Component {
         return (
             <>
             <div className="recorder">
-                {!this.state.videoOn ? <button className="record_btn" onClick={(e) => this.startCamera()}>
-                    Turn Camera On
-                </button>
-                : <button className="record_btn" onClick={(e) => this.stopCamera()}>
-                    Turn Camera Off
-                </button>
+                { !this.state.videoOn 
+                    ? <button className="record_btn" onClick={(e) => this.startCamera()}>
+                        Turn Camera On
+                    </button>
+                    : <button className="record_btn" onClick={(e) => this.stopCamera()}>
+                        Turn Camera Off
+                    </button>
                 }
-                {!this.state.recording ? 
-                    <button className="record_btn" onClick={(e) => this.startRecording(e)}>
+                { !this.state.recording  
+                    ? <button className="record_btn" onClick={(e) => this.startRecording(e)}>
                         <FaPlay />
                         Start Recording
-                    </button> :
-                    <button className="record_btn" onClick={(e) => this.stopRecording(e)}>
+                    </button>
+                    : <button className="record_btn" onClick={(e) => this.stopRecording(e)}>
                         <FaStop />
                         Stop Recording
                     </button>
                 }
             </div>
             <div className="video">
-                {this.state.videoOn ?
-                    <video
-                        muted="muted"
-                        ref={v => {
-                            this.video = v;
-                        }}>
+                { this.state.videoOn
+                    ? <video muted="muted" ref={v => {this.video = v;}} >
                         Video stream not available.
                     </video>
-                    : ""}
+                    : ""
+                }
             </div>
             </>
         )

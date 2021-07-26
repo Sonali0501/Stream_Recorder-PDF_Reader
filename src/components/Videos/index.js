@@ -8,7 +8,7 @@ const Videos = (props) => {
     return (
         <div className="list">
         {props.videos.length < 1 
-            ? <h2>No Videos Recorded</h2>
+            ? <h2>No Recorded Videos</h2>
             : <div className="players-list">
                 {props.videos.map((video,i) => 
                     <Player className="player" src={video} key={i}/>
