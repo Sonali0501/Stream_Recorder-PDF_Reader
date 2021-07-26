@@ -1,0 +1,16 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    .btn {
+        border: none;
+        background-color: rgb(74, 83, 124);
+        padding: 5px;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
