@@ -13,7 +13,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Recorder} />
         <Route path="/videos" component={Videos} />
-        <Route path="/pdf" component={PDFReader} />
+        <Route path="/pdfreader" component={PDFReader} />
       </Switch>
     </BrowserRouter>
   );
