@@ -18,20 +18,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
             .btn_list{
                 width: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-evenly;
+                justify-content: flex-end;
+                gap: 10px;
+                padding-right: 15px;
+                margin-bottom: -30px;
+                z-index: 100;
+
                 .record_btn {
                     font-size: 16px;
                     border: none;
                     background-color: rgb(74, 83, 124);
-                    padding: 10px;
+                    padding: 20px;
                     color: white;
-                    border-radius: 8px;
+                    border-radius: 50%;
                     cursor: pointer;
                     display: flex;
                     flex-direction: row;
@@ -44,7 +48,8 @@
     
         .player {
             min-width: 70vh;
-            border: 2px solid rgb(74, 83, 124);
+            border: 3px solid rgb(74, 83, 124);
+            border-radius: 8px;
         }
     }
 }
@@ -66,9 +71,19 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            .player-btns {
+                .btn_list {
+                    margin-bottom: -20px;
+                
+                    .record_btn {
+                        padding: 15px;
+                    }
+                }
+            }
             
             .player {
-                min-width: 40vh;
+                min-width: 45vh;
             }
         }
     }

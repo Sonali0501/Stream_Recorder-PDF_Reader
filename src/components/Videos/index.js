@@ -31,11 +31,9 @@ const Videos = (props) => {
                         <div className="btn_list">
                             <button className="record_btn" onClick={() => props.deleteVideo(video)}>
                                 <FaTrash />
-                                Delete
                             </button>
                             <button className="record_btn" onClick={() => downloadVideo(video)}>
                                 <FaDownload />
-                                Download
                             </button>
                         </div>
                         <Player className="player" src={video}/>
